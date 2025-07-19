@@ -19,3 +19,5 @@ class Post(Base):
     reactions = relationship("PostReaction", back_populates="post", cascade="all, delete-orphan")
     hashtags = relationship("PostHashtag", back_populates="post", cascade="all, delete")
 
+community_id = Column(Integer, ForeignKey("communities.id", ondelete="CASCADE"), nullable=True)
+community = relationship("Community", backref="posts")

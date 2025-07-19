@@ -17,3 +17,7 @@ class Profile(Base):
     avatar_url = Column(String, nullable=True)
     location = Column(String, nullable=True)
     created_at = Column(DateTime, default=datetime.utcnow)
+
+
+
+    user = relationship("User", back_populates="profile")

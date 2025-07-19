@@ -18,8 +18,8 @@ class UserRead(UserBase):
     credibility_score: Optional[float] = 0.0
     rating: Optional[float] = 0.0
     referral_code: Optional[str] = None
-    created_at: datetime
-    updated_at: datetime
+    # created_at: datetime
+    # updated_at: datetime
     credibility_score: Optional[float] = 0.0
     rating: Optional[float] = 0.0
     referral_code: Optional[str] = None

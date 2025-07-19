@@ -5,12 +5,12 @@ from app.api.reaction import router as reactions_router
 from app.api.comment import router as comments_router
 from app.api.profiles import router as profiles_router 
 from app.api.feed import router as feed_router
-
-
+from app.api.social import router as social_router
 
 app = FastAPI(title="Swaps API", version="1.0")
 
 # Route registration
+app.include_router(social_router, prefix="/social", tags=["Social"])
 app.include_router(auth_router, prefix="/auth", tags=["auth"])
 app.include_router(posts_router, prefix="/posts", tags=["posts"])
 app.include_router(profiles_router, prefix="/profiles", tags=["profiles"])
